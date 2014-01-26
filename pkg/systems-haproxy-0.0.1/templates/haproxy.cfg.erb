@@ -1,0 +1,32 @@
+# THIS FILE IS MANAGED BY PUPPET
+
+global
+    chroot      /var/lib/haproxy
+    pidfile     /var/run/haproxy.pid
+    user        haproxy
+    group       haproxy
+    daemon
+<% @merged_settings.keys.sort.each do |opt| -%>
+<%   if @merged_settings[opt] == !!(@merged_settings[opt]) -%>
+<%     if @merged_settings[opt] -%>
+    <%= opt %>
+<%     else -%>
+    no <%= opt %>
+<%     end -%>
+<%   else -%>
+    <%= opt %>		<%= @merged_settings[opt] %>
+<%   end -%>
+<% end %>
+
+defaults
+<% @merged_defaults.keys.sort.each do |opt| -%>
+<%   if @merged_defaults[opt] == !!(@merged_defaults[opt]) -%>
+<%     if @merged_defaults[opt] -%>
+    <%= opt %>
+<%     else -%>
+    no <%= opt %>
+<%     end -%>
+<%   else -%>
+    <%= opt %>		<%= @merged_defaults[opt] %>
+<%   end -%>
+<% end %>

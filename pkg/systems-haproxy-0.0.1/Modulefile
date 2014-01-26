@@ -1,0 +1,11 @@
+name 'systems-haproxy'
+version '0.0.1'
+source 'git@github.roving.com:ES/puppet.git'
+author 'David Arroyo <darroyo@constantcontact.com>'
+license 'Apache License, Version 2.0'
+summary 'Module haproxy installs and configures haproxy, a software load balancer.'
+description ''
+project_page 'http://haproxy.1wt.eu/'
+
+dependency 'puppetlabs/stdlib', '>= 2.2.1'
+dependency 'systems/concat', '>= 1.0.0'

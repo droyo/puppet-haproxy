@@ -1,0 +1,17 @@
+
+listen <%= @name %> <%= @address %>
+    mode		<%= @mode %>
+<% @merged_options.keys.sort.each do |opt| -%>
+<%   if @merged_options[opt] == !!@merged_options[opt] -%>
+<%     if @merged_options[opt] -%>
+    <%= opt %>
+<%     else -%>
+    no <%= opt %>
+<%     end -%>
+<%   else -%>
+    <%= opt %>		<%= @merged_options[opt] %>
+<%   end -%>
+<% end -%>
+<% @servers.each do |backend| -%>
+    server <%= backend %>
+<% end -%>

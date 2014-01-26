@@ -1,0 +1,32 @@
+{
+  "checksums": {
+    "README.md": "c43bf5b492e8a1871a790509b5d1a4c0",
+    "Modulefile": "296fccf88b8219e4484f7ca17f3cbd64",
+    "manifests/listen.pp": "93b7426f3381ca7024a660c21f22e06a",
+    "templates/haproxy.cfg.erb": "49aa3b49cdc3d2bf07938a50e3f5293f",
+    "manifests/init.pp": "5e00efb1d59aaa455f45073a947908dc",
+    "manifests/server.pp": "aaf61370a697e2a8c1ccfa7262087f95",
+    "templates/listen.cfg.erb": "49f2b7af65cf7107204f624c2aff6d21"
+  },
+  "description": "",
+  "project_page": "http://haproxy.1wt.eu/",
+  "summary": "Module haproxy installs and configures haproxy, a software load balancer.",
+  "source": "git@github.roving.com:ES/puppet.git",
+  "dependencies": [
+    {
+      "version_requirement": ">= 2.2.1",
+      "name": "puppetlabs/stdlib"
+    },
+    {
+      "version_requirement": ">= 1.0.0",
+      "name": "systems/concat"
+    }
+  ],
+  "author": "David Arroyo <darroyo@constantcontact.com>",
+  "types": [
+
+  ],
+  "version": "0.0.1",
+  "name": "systems-haproxy",
+  "license": "Apache License, Version 2.0"
+}
