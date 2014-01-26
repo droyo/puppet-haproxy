@@ -1,6 +1,6 @@
 Module `haproxy` installs and configures [HAProxy][0], a software
 load balancer.  The `haproxy` class manages installation and global
-configuration, and the `haproxy::backend` define can be used to
+configuration, and the `haproxy::listen` define can be used to
 specify haproxy ports and their respective backends.
 
 # Usage
